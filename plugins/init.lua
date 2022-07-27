@@ -19,20 +19,26 @@ return {
   {
     "b0o/incline.nvim",
     config = function()
-      require('incline').setup()
+      require("incline").setup()
     end
   },
   {
-    'VonHeikemen/searchbox.nvim',
+    "VonHeikemen/searchbox.nvim",
     config = function ()
-      vim.keymap.set('n', '<leader>s', ':SearchBoxIncSearch<CR>')
+      vim.keymap.set("n", "<leader>s", ":SearchBoxIncSearch<CR>")
     end
   },
-  {'MunifTanjim/nui.nvim'},
+  {"MunifTanjim/nui.nvim"},
   {
     "ethanholz/nvim-lastplace",
     event = "BufRead",
-    config = function() require "user.plugins.nvim-lastplace" end
+    config = function()
+      require("nvim-lastplace").setup({
+        lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+        lastplace_ignore_filetype = { "gitcommit", "gitrebase", "svn", "hgcommit" },
+        lastplace_open_folds = true,
+      })
+    end
   },
   {
     "romgrk/fzy-lua-native",
@@ -50,7 +56,7 @@ return {
   --       -- your configuration comes here
   --       -- or leave it empty to use the default settings
   --       -- refer to the configuration section below
-  --       -- require('telescope').load_extension('projects')
+  --       -- require("telescope").load_extension("projects")
   --     }
   --   end
   -- },
@@ -67,20 +73,20 @@ return {
   {
     "Pocco81/TrueZen.nvim",
     config = function ()
-      require('true-zen').setup()
+      require("true-zen").setup()
     end
   },
   {
     "praem90/nvim-phpcsf",
     config = function ()
-      require('phpcs').cs()
-      require('phpcs').cbf()
+      require("phpcs").cs()
+      require("phpcs").cbf()
     end
   },
   {
     "dstein64/nvim-scrollview",
     config = function ()
-      require('scrollview').setup({})
+      require("scrollview").setup({})
     end
   },
   {
@@ -94,7 +100,13 @@ return {
   {
     "nvim-telescope/telescope-fzy-native.nvim",
     config = function ()
-      require('telescope').load_extension('fzy_native')
+      require("telescope").load_extension("fzy_native")
+    end
+  },
+  {
+    "ellisonleao/glow.nvim",
+    config = function ()
+      require("glow").setup()
     end
   }
  }
