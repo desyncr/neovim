@@ -1,0 +1,192 @@
+Press q to dismiss, <Tab> to lose focus
+About {{{2
+  Abbreviations used in descriptions:
+
+  »      Forwards/rightwards
+  «      Backwards/leftwards
+  WORD   Space-delimited word
+
+  Notation for key sequences:
+
+  \      Leader (see `<leader>`)
+  ‹r›    A register (", *, 0, 1, …)
+         See `registers`
+  ‹Move› A motion or a text object
+         See `$VIMRUNTIME/doc/motion.txt`
+         See `text-objects`
+  ‹P›    A regular expression (pattern)
+         See `$VIMRUNTIME/doc/pattern.txt`
+  ‹Cmd›  An Ex command
+         See `$VIMRUNTIME/doc/cmdline.txt`
+  ‹Var›  A variable or option name
+         See `variables`
+         See `$VIMRUNTIME/doc/options.txt`
+  ‹n›    A (possibly optional) number
+  ‹c›    A single character
+  …      Any text
+  «C-…»  Press ctrl and … together
+  ««Spc»»  Press space bar
+  «CR»   Press Enter
+
+  Similarly, other special keys are
+  written between « and ». All other
+  characters are meant to be typed
+  literally.
+
+  Note that spaces are made explicit
+  only when it is not obvious that a
+  space must be used (e.g., \««Spc»», that
+  is, leader followed by space). Ditto
+  for «CR».
+
+  Labels:
+
+  N    Type in Normal mode
+  C    Type in Command mode
+  I    Type in Insert mode
+  V    Type in Visual mode
+  M    Motion (may be used by itself or
+       after an operator)
+  T    Text object (use in Visual mode
+       or after an operator)
+  O    Operator (use in Visual mode, or
+       before a motion or a text object)
+  *    Acts on text under/after cursor
+}}}
+
+Shortcuts {{{
+Create vertical split       «Spc»v     N
+Create horizontal split     «Spc»h     N
+Remove highlight            «Spc»nl    N
+Fast write                  «Spc»w     N
+Find files                  «Spc»f     N
+Recent files                «Spc»f     N
+Indent visual selection     <, >       V
+Scroll up                   «C-u»      N
+Scroll down                 «C-d»      N
+Navigate back               «C-o»      N
+Navigate forward            «C-i»      N
+Go to file in cursor        gf         N
+Go to defintion             gd         N
+Find keymap                 «C-p»      N
+Reload current buffer       :e         N
+Dashboard                   «Spc»d     N
+New File                    «Spc»fn    N
+Close Buffer                «Spc»c     N
+Terminal                    «C-\»      N
+Next Buffer                 L          N
+Previous Buffer             H          N
+Comment                     «Spc»/     N
+Resize splits               «A»‹Arrows›N
+All cheat sheets            ??         N
+}}}
+
+Filer {{{
+Set root directory          «C-]»      N
+Copy file                   c          N
+Cut file                    x          N
+Paste file                  p          N
+Delete file                 d          N
+Rename file                 r          N
+Make directory              A          N
+Create new file             a          N
+Open vertical split         «C-v»      N
+Expand all                  E          N
+Toggle hidden files         H          N
+}}}
+
+Splits {{{
+Move between splits         «C-w»‹Move›N
+Move splits                 «C-w»‹S-Move›N
+Equal proportions           «C-w»=     N
+Maximise vertically         «C-w»|     N
+Maximise horizontally       «C-w»_     N
+Resize split to the left    «C-w»‹n›<  N
+Resize spli to the right    «C-w»‹n›>  N
+Next split                  «C-w»w     N
+Previous split              «C-w»p     N
+Rotate to the right         «C-w»r     N
+Move split to new tab       «C-w»T     N
+Close split                 «C-w»c     N
+Close split and quit file   «C-w»q     N
+Close all other splits      «C-w»o     N
+}}}
+
+Bufferline {{{
+Move Buffer Right           >b         N
+Move Buffer Left            <b         N
+}}}
+
+Session Manager Mappings {{{
+Save Session                «Spc»Ss    N
+Last Session                «Spc»Sl    N
+Delete Session              «Spc»Sd    N
+Search Sessions             «Spc»Sf    N
+Load Current Directory Sessi«Spc»S.    N
+}}}
+
+LSP Mappings {{{
+LSP Info                    «Spc»li    N
+LSP Installer               «Spc»lI    N
+Hover Document              K          N
+Format Document             «Spc»lf    N
+Symbols Outline             «Spc»lS    N
+Line Diagnostics            «Spc»ld    N
+All Diagnostics             «Spc»lD    N
+Code Actions                «Spc»la    N
+Signature Help              «Spc»lh    N
+Rename                      «Spc»lr    N
+Document Symbols            «Spc»ls    N
+Diagnostic Next             ]d         N
+Diagnostics Previous        [d         N
+Declaration                 gD         N
+Definition                  gd         N
+Implementation              gI         N
+References                  gr         N
+Symbol Outline              «Spc»lS    N
+}}}
+
+Telescope Mappings {{{
+Live Grep                   «Spc»fw    N
+Live Grep (include hidden fi«Spc»fW    N
+Git Status                  «Spc»gt    N
+Git Branches                «Spc»gb    N
+Git Commits                 «Spc»gc    N
+Find files                  «Spc»ff    N
+Find files (include hidden f«Spc»fF    N
+Buffers                     «Spc»fb    N
+Help Tags                   «Spc»sh    N
+Marks                       «Spc»fm    N
+Old Files                   «Spc»fo    N
+Man Pages                   «Spc»sm    N
+Notifications               «Spc»sn    N
+Registers                   «Spc»sr    N
+Keymaps                     «Spc»sk    N
+Commands                    «Spc»sc    N
+LSP Symbols                 «Spc»ls    N
+LSP References              «Spc»lR    N
+LSP Diagnostics             «Spc»lD    N
+}}}
+
+Toggle Terminal Mappings {{{
+Toggle Terminal             «Spc»\     N
+Floating Terminal           «Spc»tf    N
+Horizontal Split Terminal   «Spc»th    N
+Vertical Split Terminal     «Spc»tv    N
+LazyGit                     «Spc»gg    N
+Node                        «Spc»tn    N
+NCDU                        «Spc»tu    N
+Htop                        «Spc»tt    N
+}}}
+
+Git Mappings {{{
+Next Hunk                   «Spc»gj    N
+Previous Hunk               «Spc»gk    N
+Blame Line                  «Spc»gl    N
+Preview Hunk                «Spc»gp    N
+Reset Hunk                  «Spc»gr    N
+Stage Hunk                  «Spc»gs    N
+Unstage Hunk                «Spc»gu    N
+Git Diff                    «Spc»gd    N
+}}}
+
