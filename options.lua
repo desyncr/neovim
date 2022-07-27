@@ -4,6 +4,7 @@ return {
     foldenable = true,
     -- foldexpr = "nvim_treesitter#foldexpr()", -- set Treesitter based folding
     foldmethod = "indent",
+    foldlevelstart=2,
     linebreak = true, -- linebreak soft wrap at words
     list = true, -- show whitespace characters
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },

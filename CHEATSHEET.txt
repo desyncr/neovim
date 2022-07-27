@@ -57,10 +57,11 @@ About {{{2
 Shortcuts {{{
 Create vertical split       «Spc»v     N
 Create horizontal split     «Spc»h     N
+Rotate between splits       «Tab»      N
 Remove highlight            «Spc»nl    N
-Fast write                  «Spc»w     N
+Write file                  «Spc»w     N
 Find files                  «Spc»f     N
-Recent files                «Spc»f     N
+Recent files                «Spc»«CR»  N
 Indent visual selection     <, >       V
 Scroll up                   «C-u»      N
 Scroll down                 «C-d»      N
@@ -74,11 +75,32 @@ Dashboard                   «Spc»d     N
 New File                    «Spc»fn    N
 Close Buffer                «Spc»c     N
 Terminal                    «C-\»      N
-Next Buffer                 L          N
-Previous Buffer             H          N
+Close terminal              «C-d»      N
+Next buffer                 L          N
+Previous buffer             H          N
 Comment                     «Spc»/     N
 Resize splits               «A»‹Arrows›N
+Toggle maximize split       «Spc»m     N
 All cheat sheets            ??         N
+}}}
+
+Splits {{{
+Move between splits         «Tab»      N
+Move between splits         «C-w»‹Move›N
+Move splits                 ‹C-Move›   N
+Move splits                 «C-w»‹S-Move›N
+Equal proportions           «C-w»=     N
+Maximise vertically         «C-w»|     N
+Maximise horizontally       «C-w»_     N
+Resize split to the left    «C-w»‹n›<  N
+Resize spli to the right    «C-w»‹n›>  N
+Next split                  «C-w»w     N
+Previous split              «C-w»p     N
+Rotate to the right         «C-w»r     N
+Move split to new tab       «C-w»T     N
+Close split                 «C-w»c     N
+Close split and quit file   «C-w»q     N
+Close all other splits      «C-w»o     N
 }}}
 
 Filer {{{
@@ -93,23 +115,6 @@ Create new file             a          N
 Open vertical split         «C-v»      N
 Expand all                  E          N
 Toggle hidden files         H          N
-}}}
-
-Splits {{{
-Move between splits         «C-w»‹Move›N
-Move splits                 «C-w»‹S-Move›N
-Equal proportions           «C-w»=     N
-Maximise vertically         «C-w»|     N
-Maximise horizontally       «C-w»_     N
-Resize split to the left    «C-w»‹n›<  N
-Resize spli to the right    «C-w»‹n›>  N
-Next split                  «C-w»w     N
-Previous split              «C-w»p     N
-Rotate to the right         «C-w»r     N
-Move split to new tab       «C-w»T     N
-Close split                 «C-w»c     N
-Close split and quit file   «C-w»q     N
-Close all other splits      «C-w»o     N
 }}}
 
 Bufferline {{{
