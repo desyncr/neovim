@@ -1,6 +1,6 @@
 # Neovim configuration
 
-Personal neovim configuration for Astronvim.
+Personal [neovim](https://neovim.io/) configuration for [Astronvim](https://astronvim.github.io/).
 
 ![Screenshot](https://github.com/desyncr/neovim/blob/master/screenshot.png?raw=true)
 
