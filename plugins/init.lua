@@ -14,6 +14,7 @@ return {
       })
     end
   },
+  {"mg979/vim-visual-multi"},
   -- Visual
   {
     "b0o/incline.nvim",
@@ -34,12 +35,6 @@ return {
     requires = {"romgrk/fzy-lua-native"},
     config = function() require "user.plugins.wilder" end
   },
-  -- {
-  --   "Pocco81/TrueZen.nvim",
-  --   config = function ()
-  --     require("true-zen").setup()
-  --   end
-  -- },
   {
     "dstein64/nvim-scrollview",
     config = function ()
@@ -72,19 +67,34 @@ return {
       require("telescope").load_extension("fzy_native")
     end
   },
-  -- Other
   {
-    "praem90/nvim-phpcsf",
-    config = function ()
-      require("phpcs").cs()
-      require("phpcs").cbf()
+    "rmagatti/goto-preview",
+    config = function()
+      require("goto-preview").setup({
+        default_mappings = true
+      })
     end
   },
+  {
+    "kosayoda/nvim-lightbulb",
+    config = function()
+      require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+    end,
+    requires = {"antoinemadec/FixCursorHold.nvim"},
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    config = function()
+      require("lsp_signature").setup()
+    end
+  },
+  -- Other
   {
     "ellisonleao/glow.nvim",
     config = function ()
       require("glow").setup()
     end
-  }
+  },
+  { "kkoomen/vim-doge" }
  }
 

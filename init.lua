@@ -91,7 +91,7 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disabled = true}
-      ["neo-tree"] = { disable = true}
+      ["neo-tree"] = { disable = true},
 
       -- You can also add new plugins here as well:
       -- { "andweeb/presence.nvim" },
@@ -111,26 +111,51 @@ local config = {
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
       config.sources = {
-        -- Set a formatter
-        null_ls.builtins.formatting.rufo,
-        -- Set a linter
-        null_ls.builtins.diagnostics.rubocop,
+        -- formatters
+        -- null_ls.builtins.formatting.lua_format,
+        null_ls.builtins.formatting.shfmt, -- shellscript
+        null_ls.builtins.formatting.prettier, -- markdown
+        -- composer global require squizlabs/php_codesniffer
+        -- null_ls.builtins.formatting.phpcbf,
+        -- composer global require friendsofphp/php-cs-fixer
+        -- null_ls.builtins.formatting.phpcsfixer,
+        -- null_ls.builtins.formatting.pint,
+        -- diagnostics
+        null_ls.builtins.diagnostics.shellcheck, -- shellcheck
+        null_ls.builtins.diagnostics.luacheck, -- brew install luarocks; luarocks install luacheck
+        -- null_ls.builtins.diagnostics.selene,
+        null_ls.builtins.diagnostics.markdownlint,
+        null_ls.builtins.diagnostics.mdl,
+        null_ls.builtins.diagnostics.php,
+        -- composer global require squizlabs/php_codesniffer
+        -- null_ls.builtins.diagnostics.phpcs,
+        -- composer global require phpmd/phpmd
+        -- null_ls.builtins.diagnostics.phpmd,
+        -- composer global require phpstan/phpstan
+        null_ls.builtins.diagnostics.phpstan,
+        -- composer global require vimeo/psalm
+        -- null_ls.builtins.diagnostics.psalm,
+        -- writing
+        -- null_ls.builtins.diagnostics.misspell,
+        null_ls.builtins.diagnostics.proselint,
+        null_ls.builtins.hover.dictionary,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
         -- NOTE: You can remove this on attach function to disable format on save
-        if client.resolved_capabilities.document_formatting then
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            desc = "Auto format before save",
-            pattern = "<buffer>",
-            callback = vim.lsp.buf.formatting_sync,
-          })
-        end
+        -- if client.resolved_capabilities.document_formatting then
+        --   vim.api.nvim_create_autocmd("BufWritePre", {
+        --     desc = "Auto format before save",
+        --     pattern = "<buffer>",
+        --     callback = vim.lsp.buf.formatting_sync,
+        --   })
+        -- end
       end
       return config -- return final config table
     end,
     treesitter = {
       ensure_installed = { "lua" },
+      indent = { enable = true },
     },
     ["nvim-lsp-installer"] = {
       ensure_installed = { "sumneko_lua" },
@@ -243,7 +268,6 @@ local config = {
       pattern = "plugins.lua",
       command = "source <afile> | PackerSync",
     })
-
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
