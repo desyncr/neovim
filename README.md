@@ -19,7 +19,7 @@ Personal [Neovim](https://neovim.io/) configuration, built on [LazyVim](https://
 ## Custom plugins
 
 - [`argonaut.nvim`](https://git.sr.ht/~foosoft/argonaut.nvim): toggle wrapping of function arguments (`<leader>aw`).
-- [`vim-visual-multi`](https://github.com/mg979/vim-visual-multi): multiple cursors.
+- [`vim-visual-multi`](https://github.com/mg979/vim-visual-multi): multiple cursors. `Ctrl+n`.
 
 ## Install
 
