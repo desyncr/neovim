@@ -28,3 +28,11 @@ git clone git@github.com:desyncr/nvim.git ~/.config/nvim
 ```
 
 Requires Neovim >= 0.9 (check `lazyvim.json`'s `install_version` for the LazyVim version this was set up against). See the [LazyVim installation docs](https://www.lazyvim.org/installation) for further dependencies (a Nerd Font, ripgrep, fd, etc.).
+
+## Other
+
+Lazyvim crashing unexpectedly?
+
+    rm -rf ~/.local/share/nvim
+    rm -rf ~/.local/state/nvim
+    rm -rf ~/.cache/nvim
